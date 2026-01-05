@@ -130,57 +130,7 @@ For maximum layout control, use `panel` with nested stacks. The single card fill
 
 ### Dense Layout Pattern
 
-For a process control aesthetic with multiple areas:
-
-```javascript
-{
-  type: 'panel',
-  cards: [{
-    type: 'vertical-stack',
-    cards: [
-      // Row 1: Main living areas
-      {
-        type: 'horizontal-stack',
-        cards: [
-          buildAreaCard('Master', masterLights),
-          buildAreaCard('Office', officeLights),
-          buildAreaCard('Kitchen', kitchenLights)
-        ]
-      },
-      // Row 2: Outdoor + secondary areas
-      {
-        type: 'horizontal-stack',
-        cards: [
-          buildAreaCard('Outside', outdoorLights),
-          buildAreaCard('Garage', garageLights)
-        ]
-      }
-    ]
-  }]
-}
-
-// Helper function for area cards
-function buildAreaCard(areaName, lights) {
-  return {
-    type: 'vertical-stack',
-    cards: [
-      { type: 'heading', heading: areaName, heading_style: 'subtitle' },
-      {
-        type: 'grid',
-        columns: Math.min(lights.length, 4),
-        square: false,
-        cards: lights.map(l => ({
-          type: 'tile',
-          entity: l.entity_id,
-          name: l.name,
-          color: 'amber',
-          vertical: true
-        }))
-      }
-    ]
-  };
-}
-```
+For process control layouts with maximum density, see [STYLE.md](STYLE.md#dense-layout-pattern-process-control).
 
 ---
 
@@ -287,24 +237,7 @@ Navigate to subview:
 |---------|----------|-------|---------|
 | Auto-responsive | Yes | No | Yes |
 | Layout control | Limited | Full | Limited |
-| Best for | Standard dashboards | Dense displays | Mixed content |
 | Card arrangement | Grid sections | Single card + stacks | Flowing columns |
 | Whitespace | More | Minimal | Moderate |
 
-### When to Use Each
-
-**`sections`** (Default)
-- Standard dashboards
-- Mobile-friendly responsive layouts
-- Quick setup without custom layout code
-
-**`panel`** (Process Control)
-- Information-dense displays
-- Precise control over card placement
-- Minimal whitespace requirements
-- Multiple entity types organized by area
-
-**`masonry`** (Mixed Content)
-- Dashboards with various card sizes
-- Weather + sensors + controls mixed
-- Flowing, magazine-style layouts
+See [STYLE.md](STYLE.md) for layout recommendations and user preferences.

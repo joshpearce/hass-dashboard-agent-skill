@@ -2,6 +2,22 @@
 
 Common errors and solutions for Home Assistant dashboard creation.
 
+## Chrome DevTools MCP Server Not Connected
+
+**Error**: `No such tool available: mcp__chrome-devtools__*`
+
+**Cause**: The Chrome DevTools MCP server is not configured.
+
+**Solution**: Install the MCP server:
+
+```bash
+claude mcp add chrome-devtools npx chrome-devtools-mcp@latest
+```
+
+After adding, restart Claude Code to load the new configuration.
+
+---
+
 ## "Url path needs to contain a hyphen" Error
 
 **Cause**: The `url_path` parameter must contain at least one hyphen.

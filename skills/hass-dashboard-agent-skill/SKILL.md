@@ -10,8 +10,9 @@ Creates and modifies Home Assistant Lovelace dashboards using the websocket API 
 
 ## Quick Reference
 
+- [STYLE.md](STYLE.md) - **User preferences and layout recommendations**
 - [CARDS.md](CARDS.md) - Card types reference (tile, entities, gauge, etc.)
-- [VIEWS.md](VIEWS.md) - View types and layout strategies
+- [VIEWS.md](VIEWS.md) - View types and layout options
 - [EXAMPLES.md](EXAMPLES.md) - Complete dashboard examples
 - [TROUBLESHOOTING.md](TROUBLESHOOTING.md) - Common errors and solutions
 
@@ -148,32 +149,9 @@ async () => {
 
 ## Layout Strategy
 
-| Use Case | View Type | Structure |
-|----------|-----------|-----------|
-| Standard dashboard | `sections` | Auto-arranged grid sections |
-| Dense/process control | `panel` | Nested horizontal/vertical stacks |
-| Mixed card sizes | `masonry` | Flowing column layout |
+See [STYLE.md](STYLE.md) for detailed layout recommendations.
 
-**Dense layout pattern** (panel + stacks):
-
-```javascript
-{
-  type: 'panel',
-  cards: [{
-    type: 'vertical-stack',
-    cards: [
-      {
-        type: 'horizontal-stack',
-        cards: [/* row 1 */]
-      },
-      {
-        type: 'horizontal-stack',
-        cards: [/* row 2 */]
-      }
-    ]
-  }]
-}
-```
+**Quick summary:** Use `masonry` view with `entities` cards (with titles) for clear hierarchy and compact layout.
 
 ## Common Card Types
 
@@ -203,7 +181,6 @@ See [CARDS.md](CARDS.md) for complete reference.
 ## Best Practices
 
 - **URL paths**: Must use kebab-case with hyphen (`all-lights`, not `lights`)
-- **Dense layouts**: Use `panel` view with `horizontal-stack`/`vertical-stack`
-- **Compact tiles**: Set `vertical: true` for icon-centric display
+- **Grouped entities**: Use `entities` card with `title` for visual hierarchy (see [STYLE.md](STYLE.md))
 - **Performance**: Limit `hours_to_show` on history graphs
 - **Always query first**: Use entity/device/area registries before building dashboards dynamically

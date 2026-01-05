@@ -16,6 +16,16 @@ A Claude Code plugin/skill for creating and modifying Home Assistant Lovelace da
 - Chrome DevTools MCP server (`mcp__chrome-devtools`)
 - Access to a Home Assistant instance
 
+## Prerequisites: Chrome DevTools MCP Setup
+
+This skill requires the Chrome DevTools MCP server to interact with Home Assistant's web interface.
+
+```bash
+claude mcp add chrome-devtools npx chrome-devtools-mcp@latest
+```
+
+After adding the MCP server, restart Claude Code to load the new configuration.
+
 ## Installation
 
 ### Option 1: Install from GitHub
