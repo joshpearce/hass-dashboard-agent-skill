@@ -1,0 +1,28 @@
+# Claude Code local settings
+.claude/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+*.sublime-*
+
+# Node (if adding any tooling later)
+node_modules/
+npm-debug.log
+
+# Python (if adding any scripts later)
+__pycache__/
+*.py[cod]
+.env
+.venv/
+venv/
+
+# Logs
+*.log

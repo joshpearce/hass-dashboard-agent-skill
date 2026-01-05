@@ -1,0 +1,15 @@
+{
+  "name": "hass-dashboard-agent-skill",
+  "version": "0.1.0",
+  "description": "Create and modify Home Assistant Lovelace dashboards using the websocket API via Chrome DevTools. Supports querying entities, creating dense process-control layouts, and organizing dashboards by area.",
+  "author": "Josh Pearce",
+  "license": "MIT",
+  "repository": "https://github.com/yourname/hass_dashboard_agent_skill",
+  "keywords": [
+    "home-assistant",
+    "lovelace",
+    "dashboard",
+    "smart-home",
+    "automation"
+  ]
+}
