@@ -14,6 +14,7 @@ Creates and modifies Home Assistant Lovelace dashboards using the websocket API 
 - [CARDS.md](CARDS.md) - Card types reference (tile, entities, gauge, etc.)
 - [VIEWS.md](VIEWS.md) - View types and layout options
 - [EXAMPLES.md](EXAMPLES.md) - Complete dashboard examples
+- [CUSTOM-CARDS.md](CUSTOM-CARDS.md) - Custom JavaScript cards for advanced layouts
 - [TROUBLESHOOTING.md](TROUBLESHOOTING.md) - Common errors and solutions
 
 ## Workflow
