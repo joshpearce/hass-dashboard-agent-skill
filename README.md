@@ -28,27 +28,18 @@ After adding the MCP server, restart Claude Code to load the new configuration.
 
 ## Installation
 
-### Option 1: Install from GitHub
-
-```
-/plugin install hass-dashboard-agent-skill@your-marketplace
-```
-
-### Option 2: Clone and install locally
+Clone the repository and copy the skill to your Claude Code settings directory:
 
 ```bash
-git clone https://github.com/yourname/hass_dashboard_agent_skill.git
-cd hass_dashboard_agent_skill
+git clone https://github.com/joshpearce/hass-dashboard-agent-skill.git
+cp -r hass-dashboard-agent-skill/skills/hass-dashboard-agent-skill ~/.claude/skills/
 ```
 
-Then in Claude Code:
-```
-/plugin install .
-```
+Alternatively, to install for a specific project only, copy to the project's `.claude/skills/` directory:
 
-### Option 3: Add to your project
-
-Copy the `skills/home-assistant-dashboards/` directory to your project's `.claude/skills/` folder.
+```bash
+cp -r hass-dashboard-agent-skill/skills/hass-dashboard-agent-skill /path/to/your/project/.claude/skills/
+```
 
 ## Usage
 
